@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  background-color: #EFEFEF; }
+  body header {
+    height: 100vh;
+    background-image: url(../img/header_background_v2.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat; }
+    body header .top-wrapper {
+      display: flex; }
+      body header .top-wrapper img {
+        width: 229px;
+        height: 132px; }
+      body header .top-wrapper nav {
+        margin-left: auto; }
+        body header .top-wrapper nav a {
+          padding: 22px 100px;
+          text-align: center;
+          text-decoration: none;
+          border-right: 2px solid #CFD8DC;
+          font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+          font-weight: bold;
+          line-height: 55px;
+          text-transform: uppercase;
+          color: #FF5722; }
+          body header .top-wrapper nav a:last-child {
+            border-right: none; }
+    body header section {
+      display: flex;
+      flex-direction: column;
+      padding-top: 140px;
+      text-align: center;
+      align-items: center; }
+      body header section h1 {
+        font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        text-transform: uppercase;
+        color: #FF5722;
+        font-size: 20px;
+        font-weight: bold; }
+      body header section a {
+        margin: auto;
+        line-height: 45px;
+        padding: 13px 65px;
+        text-decoration: none;
+        background-color: #0401AC;
+        font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        text-transform: uppercase;
+        color: #FF5722;
+        color: white; }
+  body main {
+    display: flex;
+    flex-direction: column;
+    max-width: 66vw;
+    margin-right: auto;
+    margin-left: auto; }
+    body main .toolbar {
+      margin-left: auto;
+      margin-top: 20px;
+      margin-right: 10px; }
+      body main .toolbar input {
+        padding: 13px 20px;
+        border: 1px solid #CFD8DC;
+        background: transparent; }
+        body main .toolbar input::placeholder {
+          color: grey; }
+    body main section {
+      display: flex;
+      flex-direction: column; }
+      body main section h1 {
+        margin-left: auto;
+        margin-bottom: 0;
+        color: #757575;
+        font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 19px; }
+      body main section article {
+        display: flex;
+        background-color: white;
+        padding: 10px;
+        margin: 10px 0; }
+        body main section article:nth-child(2) {
+          margin-top: 0; }
+        body main section article:last-child {
+          margin-bottom: 0; }
+        body main section article img {
+          width: 282px;
+          height: 282px; }
+        body main section article div {
+          display: flex;
+          flex-direction: column; }
+          body main section article div .post {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px 0 10px; }
+            body main section article div .post .post-description {
+              color: #C3C3D4;
+              font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+              font-size: 13px; }
+            body main section article div .post h3 {
+              color: #607D8B;
+              font-size: 18px;
+              font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+              text-transform: uppercase;
+              font-weight: bold;
+              border-top: 1px solid #CFD8DC;
+              padding-top: 10px;
+              margin-top: 13px;
+              margin-bottom: 0; }
+            body main section article div .post p {
+              font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+              color: #757575;
+              font-size: 16px;
+              margin-top: 0; }
+          body main section article div button {
+            margin-left: auto;
+            margin-right: 10px;
+            padding: 10px 73px;
+            border: none;
+            background-color: #0401AC;
+            font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            text-transform: uppercase;
+            color: #FF5722;
+            color: white;
+            font-size: 14px; }
+    body main #about div {
+      display: flex;
+      flex-direction: column; }
+      body main #about div h1 {
+        margin-top: 67px;
+        padding-right: 16px; }
+      body main #about div p {
+        margin-top: 11px;
+        font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 16px;
+        color: #757575; }
+      body main #about div img {
+        height: 226px;
+        padding-right: 16px; }
+    body main #contact {
+      display: flex;
+      flex-direction: column; }
+      body main #contact h1 {
+        margin-top: 67px; }
+      body main #contact h4 {
+        margin-left: auto;
+        margin-top: 0;
+        font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #757575; }
+      body main #contact form {
+        display: flex;
+        flex-direction: column; }
+        body main #contact form .required-inputs {
+          display: flex;
+          justify-content: space-between; }
+          body main #contact form .required-inputs .fullname-input {
+            display: flex;
+            flex-direction: column; }
+          body main #contact form .required-inputs .email-input {
+            display: flex;
+            flex-direction: column; }
+          body main #contact form .required-inputs input {
+            width: 498px;
+            height: 46px;
+            border: 1px solid #CFD8DC;
+            background: transparent; }
+        body main #contact form label {
+          margin-left: auto;
+          color: #607D8B;
+          font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+        body main #contact form .question-input {
+          display: flex;
+          flex-direction: column;
+          margin-top: 26px; }
+          body main #contact form .question-input textarea {
+            border: 1px solid #CFD8DC;
+            background: transparent;
+            flex: 1; }
+        body main #contact form button {
+          margin-left: auto;
+          margin-top: 20px;
+          width: 200px;
+          height: 38px;
+          font-size: 14px;
+          border: none;
+          background-color: #0401AC;
+          font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+          text-transform: uppercase;
+          color: #FF5722;
+          color: white; }
+  body footer {
+    font: normal 18px/26px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding: 16px;
+    font-size: 13px; }

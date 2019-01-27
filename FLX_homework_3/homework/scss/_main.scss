@@ -1,0 +1,283 @@
+@mixin background-image {
+	background-image: $background-image;
+	background-size: 100vw 100vh;
+	background-repeat: no-repeat;
+}
+
+@mixin nav-a-font {
+	font: $font;
+	font-weight: bold;
+	line-height: 55px;
+	text-transform: uppercase;
+	color: $header-font-color;
+}
+
+@mixin header-section-font {
+	font: $font;
+	text-transform: uppercase;
+	color: $header-font-color;
+}
+
+@mixin button {
+	background-color: $header-button-color;
+	@include header-section-font;
+	color: white;
+}
+
+@mixin upper-bold-text {
+	font: $font;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+@mixin border-transparent-input {
+	border: 1px solid $search-border-color;
+	background: transparent;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	margin: 0;
+	background-color: $page-background-color;
+
+	header {
+		height: 100vh;
+		@include background-image;
+		
+		.top-wrapper {
+			display: flex;
+
+			img {
+				width: 229px;
+				height: 132px;
+			}
+
+			nav {
+				margin-left: auto;
+				
+				a {
+					padding: 22px 100px;
+					text-align: center;
+					text-decoration: none;
+					border-right: 2px solid $navigation-border-color;
+					@include nav-a-font;
+
+					&:last-child {
+						border-right: none;
+					}
+				}
+			}
+		}
+
+		section {
+			@include flex-column;
+			padding-top: 140px;
+			text-align: center;
+			align-items: center;
+
+			h1 {
+				@include header-section-font;
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			a {
+				margin: auto;
+				line-height: 45px;
+				padding: 13px 65px;
+				text-decoration: none;
+				@include button;
+			}
+		}	
+	}
+
+	main {
+		@include flex-column;
+		max-width: 66vw;
+		margin-right: auto;
+		margin-left: auto;
+
+		.toolbar {
+			margin-left: auto;
+			margin-top: 20px;
+			margin-right: 10px;
+
+			input {
+				padding: 13px 20px;
+				@include border-transparent-input;
+				
+				&::placeholder {
+					color: $search-placeholder-color;
+				}
+			}
+		}
+
+		section {
+			@include flex-column;
+			
+			h1 {
+				margin-left: auto;
+				margin-bottom: 0;
+				color: $section-h1-color;
+				@include upper-bold-text;
+				font-size: 19px;
+			}
+
+			article {
+				display: flex;
+				background-color: $article-background-color;
+				padding: 10px;
+				margin: 10px 0;
+				
+				&:nth-child(2) {
+					margin-top: 0;
+				}
+				
+				&:last-child {
+					margin-bottom: 0;
+				};
+
+				img {
+					width: 282px;
+					height: 282px;
+				}
+
+				div {
+					@include flex-column;
+
+					.post{
+						@include flex-column;
+						padding: 10px 10px 0 10px;
+
+						.post-description {
+							color: $post-description-color;
+							font: $font;
+							font-size: 13px;
+						}
+
+						h3 {
+							color: $article-h3-color;
+							font-size: 18px;
+							@include upper-bold-text;
+							border-top: 1px solid $search-border-color;
+							padding-top: 10px;
+							margin-top: 13px;
+							margin-bottom: 0;
+						}
+
+						p {
+							font: $font;
+							color: $article-text-color;
+							font-size: 16px;
+							margin-top: 0;
+						}
+					}
+
+					button {
+						margin-left: auto;
+						margin-right: 10px;
+						padding: 10px 73px;
+						border: none;
+						@include button;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		#about div {
+			@include flex-column;
+
+			h1 {
+				margin-top: 67px;
+				padding-right: 16px;
+			}
+
+			p {
+				margin-top: 11px;
+				font: $font;
+				font-size: 16px;
+				color: $about-text-color;
+			}
+
+			img {
+				height: 226px;
+				padding-right: 16px; 
+			}
+		}
+
+		#contact {
+			@include flex-column;
+
+			h1 {
+				margin-top: 67px;
+			}
+
+			h4 {
+				margin-left: auto;
+				margin-top: 0;
+				@include upper-bold-text;
+				color: $about-text-color;
+			}
+
+			form {
+				@include flex-column;
+
+				.required-inputs {
+					display: flex;
+					justify-content: space-between;
+
+					.fullname-input {
+						@include flex-column;
+					}
+
+					.email-input {
+						@include flex-column;
+					}
+
+					input {
+						width: 498px;
+						height: 46px;
+						@include border-transparent-input;
+					}
+				}
+
+				label {
+					margin-left: auto;
+					color: $form-label-color;
+					font: $font;
+				}
+
+				.question-input {
+					@include flex-column;
+					margin-top: 26px; 
+
+					textarea {
+						@include border-transparent-input;
+						flex: 1;
+					}
+				}
+
+				button {
+					margin-left: auto;
+					margin-top: 20px;
+					width: 200px;
+					height: 38px;
+					font-size: 14px;
+					border: none;
+					@include button;
+				}
+			}
+		}
+	}
+
+	footer {
+		font: $font;
+		padding: 16px;
+		font-size: 13px;
+	}
+}
