@@ -4,3 +4,5 @@ function pipe(x, ...functions) {
 	}
 	return x;
 }
+
+pipe(5, Math.sqrt);

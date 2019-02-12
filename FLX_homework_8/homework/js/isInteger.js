@@ -7,3 +7,5 @@ function isInteger(a) {
 	}
 	return (true);
 }
+
+isInteger(2.4);

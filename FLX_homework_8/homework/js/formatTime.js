@@ -5,3 +5,5 @@ function formatTime(minutes) {
 	minutes = minutes - hour * 60;
 	return day + " day(s) " + hour + " hour(s) " + minutes + " minute(s).";
 }
+
+formatTime(12345);

@@ -13,3 +13,5 @@ function reverseNumber (a) {
 	}
 	return parseInt(reversedString);
 }
+
+reverseNumber(1234);
